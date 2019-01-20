@@ -1,0 +1,11 @@
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Publish to npm
+            image: node:lts
+            caches:
+              - node
+            script:
+              - npm publish
+
