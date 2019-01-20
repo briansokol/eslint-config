@@ -3,9 +3,9 @@ pipelines:
     master:
       - step:
           name: Publish to npm
-            image: node:lts
-            caches:
-              - node
-            script:
-              - npm publish
+          image: node:lts
+          caches:
+            - node
+          script:
+            - npm publish
 
