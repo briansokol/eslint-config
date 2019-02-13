@@ -1,6 +1,6 @@
 {
   "name": "@bsokol/eslint-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Eslint config library for personal projects",
   "main": "base.js",
   "keywords": [
