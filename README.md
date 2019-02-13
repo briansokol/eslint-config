@@ -11,7 +11,7 @@ npm install @bsokol/eslint-config
 React + TypeScript
 ------------------
 
-Create a file called `eslintrc.js` with this config:
+Create a file called `.eslintrc.js` with this config:
 
 ```javascript
 module.exports = {
@@ -23,7 +23,7 @@ You may want to override the React version used by the React ESlint plugin.
 
 ```javascript
 module.exports = {
-    extends: ['@bsokol/eslint-config/react-typescript']
+    extends: ['@bsokol/eslint-config/react-typescript'],
     settings: {
         react: {
             version: '16.8.0',
@@ -35,7 +35,7 @@ module.exports = {
 Node + TypeScript
 -----------------
 
-Create a file called `eslintrc.js` with this config:
+Create a file called `.eslintrc.js` with this config:
 
 ```javascript
 module.exports = {
