@@ -18,4 +18,3 @@ deploy:
     tags: true
     repo: briansokol/eslint-config
     branch: master
-  tag: next
