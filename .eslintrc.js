@@ -1,3 +1,2 @@
-module.exports = {
-    extends: ['@bsokol/eslint-config/react-typescript'],
-};
+const localConfig = require('./node-typescript');
+module.exports = localConfig;

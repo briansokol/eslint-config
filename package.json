@@ -1,6 +1,6 @@
 {
   "name": "@bsokol/eslint-config",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Configures your React/Native/Node + TypeScript project for ESlint and Prettier",
   "main": "base.js",
   "keywords": [
@@ -20,6 +20,10 @@
   },
   "scripts": {
     "lint": "eslint './**/*.js'",
+    "lint:react": "eslint './**/*.js' -c react-typescript.js",
+    "lint:react-native": "eslint './**/*.js' -c react-native-typescript.js",
+    "lint:node": "eslint './**/*.js' -c node-typescript.js",
+    "lint:all": "yarn run lint:react && yarn run lint:react-native && yarn run lint:node",
     "prettier": "prettier --write './**/*.{js,json,md,yml}'"
   },
   "peerDependencies": {
@@ -36,11 +40,11 @@
     "eslint-plugin-react-native": "3.7.0"
   },
   "devDependencies": {
-    "@bsokol/eslint-config": "1.0.2",
     "eslint": "^5",
     "husky": "3.0.0",
     "lint-staged": "9.0.1",
     "prettier": "^1.18",
+    "react": "16.8.6",
     "typescript": "^3"
   },
   "husky": {
