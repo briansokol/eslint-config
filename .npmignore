@@ -1,0 +1,7 @@
+node_modules/
+.eslintignore
+.eslintrc.js
+.prettierignore
+.travis.yml
+prettier.config.js
+yarn.lock

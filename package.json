@@ -1,25 +1,58 @@
 {
   "name": "@bsokol/eslint-config",
-  "version": "1.0.2",
-  "description": "Eslint config library for personal projects",
+  "version": "2.0.0",
+  "description": "Configures your React/Native/Node + TypeScript project for ESlint and Prettier",
   "main": "base.js",
   "keywords": [
     "eslint",
-    "eslint-config"
+    "eslint-config",
+    "prettier",
+    "react",
+    "react-native",
+    "node",
+    "typescript"
   ],
   "author": "Brian Sokol <bri@nsokol.net>",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/briansokol/eslint-config.git"
+  },
+  "scripts": {
+    "lint": "eslint './**/*.js'",
+    "prettier": "prettier --write './**/*.{js,json,md,yml}'"
+  },
   "peerDependencies": {
-    "eslint": ">= 3",
-    "prettier": ">= 1"
+    "eslint": "^5",
+    "prettier": "^1.18",
+    "typescript": "^2.8||^3"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "1.3.0",
-    "@typescript-eslint/parser": "1.3.0",
-    "eslint-config-prettier": "4.0.0",
-    "eslint-plugin-jsx-a11y": "6.2.1",
-    "eslint-plugin-react": "7.12.4",
-    "eslint-plugin-react-native": "3.6.0"
+    "@typescript-eslint/eslint-plugin": "1.11.0",
+    "@typescript-eslint/parser": "1.11.0",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.14.2",
+    "eslint-plugin-react-native": "3.7.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@bsokol/eslint-config": "1.0.2",
+    "eslint": "^5",
+    "husky": "3.0.0",
+    "lint-staged": "9.0.1",
+    "prettier": "^1.18",
+    "typescript": "^3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,yml,md}": [
+      "eslint --fix --ignore-pattern '*.json' --ignore-pattern '*.yml' --ignore-pattern '*.md'",
+      "prettier --write",
+      "git add"
+    ]
+  }
 }

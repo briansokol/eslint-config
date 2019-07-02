@@ -8,7 +8,7 @@ module.exports = {
             version: 'detect',
         },
     },
-    plugins: [...baseConfig.plugins, 'jsx-a11y', 'react'],
+    plugins: [...baseConfig.plugins, 'react', 'react-native'],
     parserOptions: {
         ...baseConfig.parserOptions,
         ecmaFeatures: {
@@ -18,7 +18,6 @@ module.exports = {
     },
     env: {
         ...baseConfig.env,
-        browser: true,
-        commonjs: true,
+        'react-native/react-native': true,
     },
 };
