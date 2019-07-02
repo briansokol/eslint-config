@@ -1,10 +1,7 @@
-.idea/
-logs
-*.log
 node_modules/
 .eslintignore
 .eslintrc.js
 .prettierignore
-bitbucket-pipelines.yml
+.travis.yml
 prettier.config.js
 yarn.lock
