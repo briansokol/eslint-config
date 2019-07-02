@@ -1,0 +1,10 @@
+.idea/
+logs
+*.log
+node_modules/
+.eslintignore
+.eslintrc.js
+.prettierignore
+bitbucket-pipelines.yml
+prettier.config.js
+yarn.lock
