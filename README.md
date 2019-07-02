@@ -12,7 +12,7 @@ You must install the following peer dependencies:
 -   Prettier @ `^1.18`
 -   TypeScript @ `^2.8` or `^3`
 
-The exact versions may depend on your existing installation or needs. Here is an example installation to get the latest versions:
+The exact versions may depend on your existing installation or needs. Here is an example command to install the latest versions:
 
 ```bash
 npm install eslint@^5 prettier@^1.18 typescript@^3 --save-dev
@@ -88,7 +88,7 @@ module.exports = {
 
 ## React Native + TypeScript
 
-_NOTE:_ This configuration is **EXPERIMENTAL**. I haven't had a chance to really use it in a React Native project. The plugin is configured, but the rules are not enabled by default. See the [docs](https://github.com/intellicode/eslint-plugin-react-native) for more information.
+_NOTE:_ This configuration is **EXPERIMENTAL**. I haven't had a chance to really use it in a React Native project. The plugin is configured, but the rules are not enabled by default. See the [docs](https://github.com/intellicode/eslint-plugin-react-native) for more information on how to enable the rules.
 
 This will configure ESLint with the following presets/plugins:
 
@@ -96,7 +96,6 @@ This will configure ESLint with the following presets/plugins:
 -   Prettier
 -   React
 -   React Native
--   JSX a11y
 -   Jest
 -   React Native globals
 
@@ -114,7 +113,7 @@ module.exports = {
 
 By default, Prettier will use its own defaults, but you can override them by creating a Prettier config file. The following is an example configuration.
 
-Create a file called `prettier.config.js` (or the [file format](https://prettier.io/docs/en/configuration.html) of your choosing) with this config:
+Create a file called `prettier.config.js` (or the [file format](https://prettier.io/docs/en/configuration.html) of your choosing) with a config like this:
 
 ```javascript
 module.exports = {

@@ -1,14 +1,14 @@
 language: node_js
 node_js:
-  - '12'
-  - '10'
-  - '8'
+  - stable
 
 install:
   - yarn install
 
 script:
-  - yarn run lint
+  - yarn run lint:react
+  - yarn run lint:node
+  - yarn run lint:react-native
 
 deploy:
   provider: npm
