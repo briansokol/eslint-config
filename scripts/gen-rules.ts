@@ -1,36 +1,36 @@
+import { Linter } from 'eslint';
 import * as util from 'util';
 import { exec } from 'child_process';
 import { createWriteStream } from 'fs';
-import * as YAML from 'json2yaml';
 const execP = util.promisify(exec);
 
-type EslintRule = string | [string, object];
-
 interface EslintRules {
-    [rule: string]: EslintRule;
+    [rule: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions;
 }
 
-interface EslintGenConfig {
+interface DocGenConfig {
     title: string;
     eslintPath: string;
     mdPath: string;
 }
 
-const eslintGenConfigs: EslintGenConfig[] = [
+const DOC_OUT_DIR = 'docs';
+
+const eslintGenConfigs: DocGenConfig[] = [
     {
         title: '@bsokol/eslint-config/react-typescript',
         eslintPath: './react-typescript.js',
-        mdPath: './rules/react-typescript.md',
+        mdPath: `./${DOC_OUT_DIR}/react-typescript.md`,
     },
     {
         title: '@bsokol/eslint-config/node-typescript',
         eslintPath: './node-typescript.js',
-        mdPath: './rules/node-typescript.md',
+        mdPath: `./${DOC_OUT_DIR}/node-typescript.md`,
     },
     {
         title: '@bsokol/eslint-config/react-native-typescript',
         eslintPath: './react-native-typescript.js',
-        mdPath: './rules/react-native-typescript.md',
+        mdPath: `./${DOC_OUT_DIR}/react-native-typescript.md`,
     },
 ];
 
@@ -83,7 +83,7 @@ function linkify(rule: string): string {
     return rule;
 }
 
-async function writeRulesToMarkdown(config: EslintGenConfig, rules: EslintRules): Promise<void> {
+async function writeRulesToMarkdown(config: DocGenConfig, rules: EslintRules): Promise<void> {
     const writeStream = createWriteStream(config.mdPath);
     writeStream.write(`## ${config.title}\n\n`);
     writeStream.write(`**Configured rules**\n\n`);
@@ -92,21 +92,31 @@ async function writeRulesToMarkdown(config: EslintGenConfig, rules: EslintRules)
     Object.keys(rules)
         .sort()
         .forEach((ruleName: string): void => {
-            const ruleLevel: string = (Array.isArray(rules[ruleName])
-                ? rules[ruleName][0]
-                : rules[ruleName]) as string;
-            const ruleConfig: string = Array.isArray(rules[ruleName])
-                ? `<pre>${YAML.stringify(rules[ruleName][1]).replace(
-                      RegExp('\\n', 'g'),
-                      '<br>'
-                  )}</pre>`
-                : '&#8291;';
+            let ruleLevel: string;
+            let ruleConfig: string;
+
+            if (Array.isArray(rules[ruleName])) {
+                ruleLevel = rules[ruleName][0] as string;
+                ruleConfig = (rules[ruleName] as Linter.RuleLevelAndOptions)
+                    .filter((key, i) => i !== 0)
+                    .map(
+                        options =>
+                            `<pre>${JSON.stringify(options, null, 2).replace(
+                                RegExp('\\n', 'g'),
+                                '<br>'
+                            )}</pre>`
+                    )
+                    .join('<br>');
+            } else {
+                ruleLevel = rules[ruleName] as string;
+                ruleConfig = '&#8291;';
+            }
             writeStream.write(`${linkify(ruleName)}|${formatLevel(ruleLevel)}|${ruleConfig}\n`);
         });
     writeStream.end();
 }
 
-async function genRulesList(config: EslintGenConfig): Promise<void> {
+async function genRulesList(config: DocGenConfig): Promise<void> {
     const { stdout } = await execP(
         `./node_modules/.bin/eslint --config ${config.eslintPath} --print-config ./base.js`
     );

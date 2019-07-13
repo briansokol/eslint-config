@@ -45,6 +45,7 @@ export const baseConfig = {
         'no-eq-null': 'error',
         'no-extra-bind': 'error',
         'no-negated-condition': 'warn',
+        'no-restricted-imports': ['error', 'lodash'],
         'no-shadow-restricted-names': 'error',
         'no-shadow': 'warn',
         'no-use-before-define': 'error',
