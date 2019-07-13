@@ -101,9 +101,9 @@ async function writeRulesToMarkdown(config: DocGenConfig, rules: EslintRules): P
                     .filter((key, i) => i !== 0)
                     .map(
                         options =>
-                            `<pre><code>${JSON.stringify(options, null, 2)
+                            `<pre>${JSON.stringify(options, null, 2)
                                 .replace(RegExp('\\n', 'g'), '<br>')
-                                .replace(RegExp(' ', 'g'), '&nbsp;')}</code></pre>`
+                                .replace(RegExp(' ', 'g'), '&nbsp;')}</pre>`
                     )
                     .join('<br>');
             } else {
