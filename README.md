@@ -4,6 +4,8 @@ I created this library to make it easier for me to stand up a new project. It us
 
 This project uses itself for linting and formatting.
 
+The full list of activated rules can be found [here](docs).
+
 ## Prerequisites
 
 You must install the following peer dependencies:
@@ -45,7 +47,7 @@ This will configure ESLint with the following presets/plugins:
 -   [Browserslist compatibility](https://github.com/amilajack/eslint-plugin-compat)
 -   Browser/CommonJS globals
 
-The list of configured rules can be found [here](rules/react-typescript.md).
+The list of configured rules can be found [here](docs/react-typescript.md).
 
 ### ESLint Configuration
 
@@ -66,7 +68,7 @@ This will configure ESLint with the following presets/plugins:
 -   [Jest](https://github.com/jest-community/eslint-plugin-jest) rules & globals
 -   Node globals
 
-The list of configured rules can be found [here](rules/node-typescript.md).
+The list of configured rules can be found [here](docs/node-typescript.md).
 
 ### ESLint Configuration
 
@@ -87,12 +89,11 @@ This will configure ESLint with the following presets/plugins:
 -   [TypeScript](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
 -   [Prettier](https://github.com/prettier/eslint-config-prettier)
 -   [React](https://github.com/yannickcr/eslint-plugin-react)
--   [React Native](https://github.com/intellicode/eslint-plugin-react-native)
+-   [React Native](https://github.com/intellicode/eslint-plugin-react-native) rules and globals
 -   [React hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 -   [Jest](https://github.com/jest-community/eslint-plugin-jest) rules & globals
--   React Native globals
 
-The list of configured rules can be found [here](rules/react-native-typescript.md).
+The list of configured rules can be found [here](docs/react-native-typescript.md).
 
 ### ESLint Configuration
 
