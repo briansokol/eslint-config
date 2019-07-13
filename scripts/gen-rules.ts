@@ -87,7 +87,7 @@ async function writeRulesToMarkdown(config: DocGenConfig, rules: EslintRules): P
     const writeStream = createWriteStream(config.mdPath);
     writeStream.write(`## ${config.title}\n\n`);
     writeStream.write(`**Configured rules**\n\n`);
-    writeStream.write('Rule | Level | Additional Config\n');
+    writeStream.write('Rule | Level | Additional Configs\n');
     writeStream.write('---|---|---\n');
     Object.keys(rules)
         .sort()
