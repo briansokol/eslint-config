@@ -100,7 +100,7 @@ async function writeRulesToMarkdown(config: EslintGenConfig, rules: EslintRules)
                       RegExp('\\n', 'g'),
                       '<br>'
                   )}</pre>`
-                : '-';
+                : '&#8291;';
             writeStream.write(`${linkify(ruleName)}|${formatLevel(ruleLevel)}|${ruleConfig}\n`);
         });
     writeStream.end();
