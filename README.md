@@ -36,13 +36,16 @@ yarn add @bsokol/eslint-config --dev
 
 This will configure ESLint with the following presets/plugins:
 
--   TypeScript
--   Prettier
--   React
--   React Native
--   JSX a11y
--   Jest
+-   [TypeScript](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
+-   [Prettier](https://github.com/prettier/eslint-config-prettier)
+-   [React](https://github.com/yannickcr/eslint-plugin-react)
+-   [React hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+-   [JSX a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y#readme)
+-   [Jest](https://github.com/jest-community/eslint-plugin-jest) rules & globals
+-   [Browserslist compatibility](https://github.com/amilajack/eslint-plugin-compat)
 -   Browser/CommonJS globals
+
+The list of configured rules can be found [here](rules/react-typescript.md).
 
 ### ESLint Configuration
 
@@ -54,27 +57,16 @@ module.exports = {
 };
 ```
 
-ESlint will detect the installed React version, but you can override the version if necessary:
-
-```javascript
-module.exports = {
-    extends: ['@bsokol/eslint-config/react-typescript'],
-    settings: {
-        react: {
-            version: '16.8.0',
-        },
-    },
-};
-```
-
 ## Node + TypeScript
 
 This will configure ESLint with the following presets/plugins:
 
--   TypeScript
--   Prettier
--   Jest
+-   [TypeScript](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
+-   [Prettier](https://github.com/prettier/eslint-config-prettier)
+-   [Jest](https://github.com/jest-community/eslint-plugin-jest) rules & globals
 -   Node globals
+
+The list of configured rules can be found [here](rules/node-typescript.md).
 
 ### ESLint Configuration
 
@@ -88,16 +80,19 @@ module.exports = {
 
 ## React Native + TypeScript
 
-_NOTE:_ This configuration is **EXPERIMENTAL**. I haven't had a chance to really use it in a React Native project. The plugin is configured, but the rules are not enabled by default. See the [docs](https://github.com/intellicode/eslint-plugin-react-native) for more information on how to enable the rules.
+_NOTE:_ This configuration is **EXPERIMENTAL**. I haven't had a chance to really use it in a React Native project. The plugin is configured and rules are set to sensible defaults. See the [docs](https://github.com/intellicode/eslint-plugin-react-native) for more information on how to change the rules.
 
 This will configure ESLint with the following presets/plugins:
 
--   TypeScript
--   Prettier
--   React
--   React Native
--   Jest
+-   [TypeScript](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
+-   [Prettier](https://github.com/prettier/eslint-config-prettier)
+-   [React](https://github.com/yannickcr/eslint-plugin-react)
+-   [React Native](https://github.com/intellicode/eslint-plugin-react-native)
+-   [React hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+-   [Jest](https://github.com/jest-community/eslint-plugin-jest) rules & globals
 -   React Native globals
+
+The list of configured rules can be found [here](rules/react-native-typescript.md).
 
 ### ESLint Configuration
 
@@ -113,7 +108,7 @@ module.exports = {
 
 By default, Prettier will use its own defaults, but you can override them by creating a Prettier config file. The following is an example configuration.
 
-Create a file called `prettier.config.js` (or the [file format](https://prettier.io/docs/en/configuration.html) of your choosing) with a config like this:
+Create a file called `prettier.config.js` (or the [file format](https://prettier.io/docs/en/configuration.html) of your choosing) with a config similar to this:
 
 ```javascript
 module.exports = {
@@ -131,3 +126,15 @@ module.exports = {
     ],
 };
 ```
+
+See the [configuration guide](https://prettier.io/docs/en/configuration.html) for more configuration options.
+
+## Browserslist Configuration
+
+By default, the language features you use in your code will be linted against the available features in the following browserslist configuration:
+
+```text
+> 0.5%, last 2 versions, Firefox ESR, not dead
+```
+
+For more advanced setup and overrides, follow the instructions in the [documentation](https://github.com/amilajack/eslint-plugin-compat#3-configure-target-browsers).

@@ -19,12 +19,14 @@
     "url": "https://github.com/briansokol/eslint-config.git"
   },
   "scripts": {
-    "lint": "eslint './**/*.js'",
+    "lint": "eslint './**/*.{js,ts}'",
     "lint:react": "eslint './**/*.js' -c react-typescript.js",
     "lint:react-native": "eslint './**/*.js' -c react-native-typescript.js",
     "lint:node": "eslint './**/*.js' -c node-typescript.js",
     "lint:all": "yarn run lint:react && yarn run lint:react-native && yarn run lint:node",
-    "prettier": "prettier --write './**/*.{js,json,md,yml}'"
+    "prettier": "prettier --write './**/*.{js,json,md,yml}'",
+    "build-ts": "tsc",
+    "build-rules": "ts-node ./scripts/gen-rules"
   },
   "peerDependencies": {
     "eslint": "^5",
@@ -35,26 +37,37 @@
     "@typescript-eslint/eslint-plugin": "1.11.0",
     "@typescript-eslint/parser": "1.11.0",
     "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-compat": "3.2.0",
+    "eslint-plugin-jest": "22.7.2",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.14.2",
+    "eslint-plugin-react-hooks": "1.6.1",
     "eslint-plugin-react-native": "3.7.0"
   },
   "devDependencies": {
+    "@types/node": "12.6.2",
     "eslint": "^5",
     "husky": "3.0.0",
+    "json2yaml": "1.1.0",
     "lint-staged": "9.0.1",
     "prettier": "^1.18",
     "react": "16.8.6",
+    "ts-node": "8.3.0",
     "typescript": "^3"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn run build-rules && yarn run build-ts && git add . && lint-staged",
+      "post-commit": "git update-index --again"
     }
   },
   "lint-staged": {
-    "*.{js,json,yml,md}": [
-      "eslint --fix --ignore-pattern '*.json' --ignore-pattern '*.yml' --ignore-pattern '*.md'",
+    "*.{js,ts}": [
+      "eslint --debug --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,yml,md}": [
       "prettier --write",
       "git add"
     ]
