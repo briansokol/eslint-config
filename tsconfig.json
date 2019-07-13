@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "allowJs": true,
+    "alwaysStrict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "outDir": ".",
+    "isolatedModules": false
+  },
+  "files": ["src/node-typescript.ts", "src/react-typescript.ts", "src/react-native-typescript.ts"]
+}

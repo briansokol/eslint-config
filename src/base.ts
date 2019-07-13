@@ -1,6 +1,4 @@
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-exports.baseConfig = {
+export const baseConfig = {
     parser: '@typescript-eslint/parser',
     extends: [
         'eslint:recommended',
