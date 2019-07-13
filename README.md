@@ -6,6 +6,8 @@ This project uses itself for linting and formatting.
 
 The full list of activated rules can be found [here](docs).
 
+This library adheres to semantic versioning. This means that any change to a rule could be a breaking change for your projects. Therefore, any rule changes will be published as a new major version.
+
 ## Prerequisites
 
 You must install the following peer dependencies:
