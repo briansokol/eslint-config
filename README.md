@@ -12,18 +12,18 @@ This library adheres to semantic versioning. This means that any change to a rul
 
 You must install the following peer dependencies:
 
--   ESLint @ `^5`
+-   ESLint @ `^6`
 -   Prettier @ `^1.18`
--   TypeScript @ `^2.8` or `^3`
+-   TypeScript @ `^3`
 
 The exact versions may depend on your existing installation or needs. Here is an example command to install the latest versions:
 
 ```bash
-npm install eslint@^5 prettier@^1.18 typescript@^3 --save-dev
+npm install eslint@^6 prettier@^1.18 typescript@^3 --save-dev
 ```
 
 ```bash
-yarn add eslint@^5 prettier@^1.18 typescript@^3 --dev
+yarn add eslint@^6 prettier@^1.18 typescript@^3 --dev
 ```
 
 ## Installation

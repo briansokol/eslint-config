@@ -126,7 +126,7 @@
 | [no-mixed-spaces-and-tabs](https://eslint.org/docs/rules/no-mixed-spaces-and-tabs)                                                                                                        | Off   |
 | [no-multi-spaces](https://eslint.org/docs/rules/no-multi-spaces)                                                                                                                          | Off   |
 | [no-multiple-empty-lines](https://eslint.org/docs/rules/no-multiple-empty-lines)                                                                                                          | Off   |
-| [no-negated-condition](https://eslint.org/docs/rules/no-negated-condition)                                                                                                                | Warn  |
+| [no-negated-condition](https://eslint.org/docs/rules/no-negated-condition)                                                                                                                | Off   |
 | [no-new-symbol](https://eslint.org/docs/rules/no-new-symbol)                                                                                                                              | Error |
 | [no-obj-calls](https://eslint.org/docs/rules/no-obj-calls)                                                                                                                                | Error |
 | [no-octal](https://eslint.org/docs/rules/no-octal)                                                                                                                                        | Error |
@@ -173,7 +173,7 @@
 | [prefer-spread](https://eslint.org/docs/rules/prefer-spread)                                                                                                                              | Error |
 | [quote-props](https://eslint.org/docs/rules/quote-props)                                                                                                                                  | Off   |
 | [quotes](https://eslint.org/docs/rules/quotes)                                                                                                                                            | Off   |
-| [require-atomic-updates](https://eslint.org/docs/rules/require-atomic-updates)                                                                                                            | Warn  |
+| [require-atomic-updates](https://eslint.org/docs/rules/require-atomic-updates)                                                                                                            | Off   |
 | [require-yield](https://eslint.org/docs/rules/require-yield)                                                                                                                              | Error |
 | [rest-spread-spacing](https://eslint.org/docs/rules/rest-spread-spacing)                                                                                                                  | Off   |
 | [semi](https://eslint.org/docs/rules/semi)                                                                                                                                                | Off   |
