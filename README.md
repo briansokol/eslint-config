@@ -18,9 +18,9 @@ This library adheres to semantic versioning. This means that any change to a rul
 
 You must install the following peer dependencies:
 
-![ESLint](https://img.shields.io/npm/dependency-version/@bsokol/eslint-config/dev/eslint)
-![Prettier](https://img.shields.io/npm/dependency-version/@bsokol/eslint-config/dev/prettier)
-![TypeScript](https://img.shields.io/npm/dependency-version/@bsokol/eslint-config/dev/typescript)
+-   ESLint @ `^6`
+-   Prettier @ `^1.18`
+-   TypeScript @ `^3`
 
 The exact versions may depend on your existing installation or needs. Here are example commands to install the latest versions:
 
