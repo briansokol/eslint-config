@@ -44,7 +44,7 @@
 | [comma-dangle](https://eslint.org/docs/rules/comma-dangle)                                                                                                                                | Off   |
 | [comma-spacing](https://eslint.org/docs/rules/comma-spacing)                                                                                                                              | Off   |
 | [comma-style](https://eslint.org/docs/rules/comma-style)                                                                                                                                  | Off   |
-| compat/compat                                                                                                                                                                             | Error |
+| [compat/compat](https://github.com/amilajack/eslint-plugin-compat#readme)                                                                                                                 | Error |
 | [computed-property-spacing](https://eslint.org/docs/rules/computed-property-spacing)                                                                                                      | Off   |
 | [constructor-super](https://eslint.org/docs/rules/constructor-super)                                                                                                                      | Error |
 | [curly](https://eslint.org/docs/rules/curly)                                                                                                                                              | Off   |
