@@ -1,5 +1,9 @@
 # @bsokol/eslint-config
 
+[![npm Version](https://img.shields.io/npm/v/@bsokol/eslint-config)](https://www.npmjs.com/package/@bsokol/eslint-config)
+[![License](https://img.shields.io/npm/l/@bsokol/eslint-config)](https://raw.githubusercontent.com/briansokol/eslint-config/master/LICENSE)
+[![Monthly Downloads](https://img.shields.io/npm/dm/@bsokol/eslint-config)](https://www.npmjs.com/package/@bsokol/eslint-config)
+[![Known Vulnerabilities](https://snyk.io/test/npm/@bsokol/eslint-config/badge.svg)](https://snyk.io/test/npm/@bsokol/eslint-config)
 [![Greenkeeper badge](https://badges.greenkeeper.io/briansokol/eslint-config.svg)](https://greenkeeper.io/)
 
 I created this library to make it easier for me to stand up a new project. It uses sensible recommended defaults, in addition to some of my personal preferences. You can override the various rules by altering your ESLint config file.
@@ -14,11 +18,11 @@ This library adheres to semantic versioning. This means that any change to a rul
 
 You must install the following peer dependencies:
 
--   ESLint @ `^6`
--   Prettier @ `^1.18`
--   TypeScript @ `^3`
+![ESLint](https://img.shields.io/npm/dependency-version/@bsokol/eslint-config/dev/eslint)
+![Prettier](https://img.shields.io/npm/dependency-version/@bsokol/eslint-config/dev/prettier)
+![TypeScript](https://img.shields.io/npm/dependency-version/@bsokol/eslint-config/dev/typescript)
 
-The exact versions may depend on your existing installation or needs. Here is an example command to install the latest versions:
+The exact versions may depend on your existing installation or needs. Here are example commands to install the latest versions:
 
 ```bash
 npm install eslint@^6 prettier@^1.18 typescript@^3 --save-dev
