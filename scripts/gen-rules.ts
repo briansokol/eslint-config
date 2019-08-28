@@ -77,6 +77,10 @@ function linkify(rule: string): string {
         return `[${rule}](https://www.npmjs.com/package/eslint-plugin-react-hooks)`;
     }
 
+    if (prefix === 'compat') {
+        return `[${rule}](https://github.com/amilajack/eslint-plugin-compat#readme)`;
+    }
+
     if (!baseRule) {
         return `[${rule}](https://eslint.org/docs/rules/${prefix})`;
     }
