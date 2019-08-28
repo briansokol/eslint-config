@@ -46,7 +46,7 @@ exports.baseConfig = {
         ],
         'no-eq-null': 'error',
         'no-extra-bind': 'error',
-        'no-negated-condition': 'warn',
+        'no-negated-condition': 'off',
         'no-restricted-imports': ['error', 'lodash'],
         'no-shadow-restricted-names': 'error',
         'no-shadow': 'warn',
@@ -71,6 +71,6 @@ exports.baseConfig = {
         ],
         'prefer-object-spread': 'error',
         'prefer-rest-params': 'error',
-        'require-atomic-updates': 'warn',
+        'require-atomic-updates': 'off',
     },
 };
