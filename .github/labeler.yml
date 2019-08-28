@@ -1,0 +1,13 @@
+config: base.js
+
+config-react: react-typescript.js
+
+config-react-native: react-native-typescript.js
+
+config-node: node-typescript.js
+
+dependencies: yarn.lock
+
+documentation:
+  - docs/*.md
+  - README.md
