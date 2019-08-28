@@ -1,5 +1,7 @@
 # @bsokol/eslint-config
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/briansokol/eslint-config.svg)](https://greenkeeper.io/)
+
 I created this library to make it easier for me to stand up a new project. It uses sensible recommended defaults, in addition to some of my personal preferences. You can override the various rules by altering your ESLint config file.
 
 This project uses itself for linting and formatting.
