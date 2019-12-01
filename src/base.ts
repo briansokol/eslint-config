@@ -22,14 +22,9 @@ export const baseConfig = {
         jest: true,
     },
     rules: {
-        '@typescript-eslint/explicit-function-return-type': [
-            'warn',
-            {
-                allowExpressions: true,
-                allowTypedFunctionExpressions: true,
-                allowHigherOrderFunctions: true,
-            },
-        ],
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/no-empty-interface': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/no-var-requires': 'off',
         'no-alert': 'warn',
         'no-array-constructor': 'error',
