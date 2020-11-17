@@ -18,7 +18,7 @@ This library adheres to semantic versioning. This means that any change to a rul
 
 You must install the following peer dependencies:
 
--   ESLint @ `^6`
+-   ESLint @ `^7`
 -   Prettier @ `^1.18`
 -   TypeScript @ `^3`
 
