@@ -29,7 +29,7 @@
     "build-rules": "ts-node ./scripts/gen-rules"
   },
   "engines": {
-    "node": ">=9"
+    "node": ">=10.13.0"
   },
   "peerDependencies": {
     "eslint": "^7",
