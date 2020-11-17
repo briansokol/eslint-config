@@ -6,6 +6,8 @@ config-react-native: react-native-typescript.js
 
 config-node: node-typescript.js
 
+config-jest: jest.js
+
 dependencies: yarn.lock
 
 documentation:
