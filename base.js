@@ -1,27 +1,26 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-exports.baseConfig = {
+exports.default = {
     parser: '@typescript-eslint/parser',
     extends: [
         'eslint:recommended',
+        'plugin:node/recommended',
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'prettier',
         'prettier/@typescript-eslint',
-        'plugin:jest/recommended',
-        'plugin:jest/style',
     ],
     plugins: ['@typescript-eslint/eslint-plugin'],
     parserOptions: {
-        ecmaVersion: 2019,
+        ecmaVersion: 2020,
         sourceType: 'module',
         ecmaFeatures: {
             impliedStrict: true,
         },
     },
     env: {
+        node: true,
         es6: true,
-        jest: true,
     },
     rules: {
         '@typescript-eslint/explicit-function-return-type': 'off',
@@ -67,5 +66,12 @@ exports.baseConfig = {
         'prefer-object-spread': 'error',
         'prefer-rest-params': 'error',
         'require-atomic-updates': 'off',
+        'node/no-unsupported-features/es-syntax': 'off',
+        'node/no-missing-import': [
+            'error',
+            {
+                tryExtensions: ['.ts', '.js', '.json', '.node'],
+            },
+        ],
     },
 };

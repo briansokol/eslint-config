@@ -1,13 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "es2020",
     "module": "commonjs",
     "allowJs": true,
     "alwaysStrict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "outDir": ".",
-    "isolatedModules": false
+    "isolatedModules": false,
+    "skipLibCheck": true
   },
-  "files": ["src/node-typescript.ts", "src/react-typescript.ts", "src/react-native-typescript.ts"]
+  "files": [
+    "src/node-typescript.ts",
+    "src/react-typescript.ts",
+    "src/react-native-typescript.ts",
+    "src/jest.ts"
+  ]
 }
