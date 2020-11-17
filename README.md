@@ -3,7 +3,7 @@
 [![npm Version](https://img.shields.io/npm/v/@bsokol/eslint-config)](https://www.npmjs.com/package/@bsokol/eslint-config)
 [![License](https://img.shields.io/npm/l/@bsokol/eslint-config)](https://raw.githubusercontent.com/briansokol/eslint-config/master/LICENSE)
 [![Monthly Downloads](https://img.shields.io/npm/dm/@bsokol/eslint-config)](https://www.npmjs.com/package/@bsokol/eslint-config)
-[![Known Vulnerabilities](https://snyk.io/test/npm/@bsokol/eslint-config/badge.svg)](https://snyk.io/test/npm/@bsokol/eslint-config)
+[![Known Vulnerabilities](https://snyk.io/test/github/briansokol/eslint-config/badge.svg?targetFile=package.json)](https://snyk.io/test/github/briansokol/eslint-config?targetFile=package.json)
 
 I created this library to make it easier for me to stand up a new project. It uses sensible recommended defaults, in addition to some of my personal preferences. You can override the various rules by altering your ESLint config file.
 
