@@ -7,7 +7,6 @@ install:
   - npm install
 
 script:
-  - npm run lint:base
   - npm run lint:react
   - npm run lint:node
   - npm run lint:react-native

@@ -20,12 +20,11 @@
   },
   "scripts": {
     "lint": "eslint './**/*.{js,ts}'",
-    "lint:base": "eslint './**/*.js' -c base.js",
     "lint:react": "eslint './**/*.js' -c react-typescript.js",
     "lint:react-native": "eslint './**/*.js' -c react-native-typescript.js",
     "lint:node": "eslint './**/*.js' -c node-typescript.js",
     "lint:jest": "eslint './**/*.js' -c jest.js",
-    "lint:all": "npm run lint:base && npm run lint:react && npm run lint:react-native && npm run lint:node && npm run lint:jest",
+    "lint:all": "npm run lint:react && npm run lint:react-native && npm run lint:node && npm run lint:jest",
     "prettier": "prettier --write './**/*.{js,json,md,yml}'",
     "build-ts": "tsc",
     "build-rules": "ts-node ./scripts/gen-rules"
