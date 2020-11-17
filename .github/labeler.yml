@@ -8,7 +8,7 @@ config-node: node-typescript.js
 
 config-jest: jest.js
 
-dependencies: yarn.lock
+dependencies: package-lock.json
 
 documentation:
   - docs/*.md

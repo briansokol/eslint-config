@@ -3,12 +3,15 @@ node_js:
   - stable
 
 install:
-  - yarn install
+  - npm install -g npm@7
+  - npm install
 
 script:
-  - yarn run lint:react
-  - yarn run lint:node
-  - yarn run lint:react-native
+  - npm run lint:base
+  - npm run lint:react
+  - npm run lint:node
+  - npm run lint:react-native
+  - npm run lint:jest
 
 deploy:
   provider: npm
