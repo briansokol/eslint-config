@@ -1,6 +1,7 @@
 .idea
 node_modules
 base.js
+jest.js
 node-typescript.js
 react-typescript.js
 react-native-typescript.js

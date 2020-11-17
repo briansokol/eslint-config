@@ -32,6 +32,11 @@ const eslintGenConfigs: DocGenConfig[] = [
         eslintPath: './react-native-typescript.js',
         mdPath: `./${DOC_OUT_DIR}/react-native-typescript.md`,
     },
+    {
+        title: '@bsokol/eslint-config/jest',
+        eslintPath: './jest.js',
+        mdPath: `./${DOC_OUT_DIR}/jest.md`,
+    },
 ];
 
 function formatLevel(level: string): string {
@@ -51,7 +56,8 @@ function formatLevel(level: string): string {
 }
 
 function linkify(rule: string): string {
-    const [prefix, baseRule] = rule.split('/');
+    const [prefix, ...baseRules] = rule.split('/');
+    const baseRule = baseRules.join('/');
 
     if (prefix === '@typescript-eslint') {
         return `[${rule}](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/${baseRule}.md)`;
@@ -79,6 +85,10 @@ function linkify(rule: string): string {
 
     if (prefix === 'compat') {
         return `[${rule}](https://github.com/amilajack/eslint-plugin-compat#readme)`;
+    }
+
+    if (prefix === 'node') {
+        return `[${rule}](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/${baseRule}.md)`;
     }
 
     if (!baseRule) {
@@ -121,7 +131,7 @@ async function writeRulesToMarkdown(config: DocGenConfig, rules: EslintRules): P
 
 async function genRulesList(config: DocGenConfig): Promise<void> {
     const { stdout } = await execP(
-        `./node_modules/.bin/eslint --config ${config.eslintPath} --print-config ./base.js`
+        `./node_modules/.bin/eslint --config ${config.eslintPath} --print-config ${config.eslintPath}`
     );
     const { rules } = JSON.parse(stdout);
     await writeRulesToMarkdown(config, rules);
