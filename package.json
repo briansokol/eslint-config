@@ -1,7 +1,7 @@
 {
   "name": "@bsokol/eslint-config",
   "version": "6.0.2",
-  "description": "Configures your React/Native/Node + TypeScript project for ESlint and Prettier",
+  "description": "Configures your React/Native/Node + TypeScript project for ESLint and Prettier",
   "main": "node-typescript.js",
   "keywords": [
     "eslint",
@@ -34,7 +34,6 @@
   },
   "peerDependencies": {
     "eslint": "^7",
-    "jest": ">=20",
     "prettier": "^2",
     "typescript": ">=3"
   },
