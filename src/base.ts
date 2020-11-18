@@ -25,6 +25,7 @@ export default {
         '@typescript-eslint/no-empty-interface': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/no-use-before-define': 'error',
         'no-alert': 'warn',
         'no-array-constructor': 'error',
         'no-async-promise-executor': 'error',
@@ -42,7 +43,7 @@ export default {
         'no-restricted-imports': ['error', 'lodash'],
         'no-shadow-restricted-names': 'error',
         'no-shadow': 'warn',
-        'no-use-before-define': 'error',
+        'no-use-before-define': 'off',
         'no-var': 'error',
         'prefer-const': 'error',
         'prefer-destructuring': [
@@ -68,7 +69,7 @@ export default {
         'node/no-missing-import': [
             'error',
             {
-                tryExtensions: ['.ts', '.js', '.json', '.node'],
+                tryExtensions: ['.ts', '.tsx', '.d.ts', '.js', '.json', '.node'],
             },
         ],
     },
