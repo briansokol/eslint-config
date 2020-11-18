@@ -1,6 +1,6 @@
 {
   "name": "@bsokol/eslint-config",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "description": "Configures your React/Native/Node + TypeScript project for ESLint and Prettier",
   "main": "node-typescript.js",
   "keywords": [
