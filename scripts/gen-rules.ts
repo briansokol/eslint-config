@@ -91,6 +91,26 @@ function linkify(rule: string): string {
         return `[${rule}](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/${baseRule}.md)`;
     }
 
+    if (prefix === '@babel' || prefix === 'babel') {
+        return `[${rule}](https://github.com/babel/babel/tree/main/eslint/babel-eslint-plugin)`;
+    }
+
+    if (prefix === 'flowtype') {
+        return `[${rule}](https://github.com/gajus/eslint-plugin-flowtype#${baseRule})`;
+    }
+
+    if (prefix === 'standard') {
+        return `[${rule}](https://github.com/standard/eslint-config-standard)`;
+    }
+
+    if (prefix === 'unicorn') {
+        return `[${rule}](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/${baseRule}.md)`;
+    }
+
+    if (prefix === 'vue') {
+        return `[${rule}](https://eslint.vuejs.org/rules/${baseRule}.html)`;
+    }
+
     if (!baseRule) {
         return `[${rule}](https://eslint.org/docs/rules/${prefix})`;
     }
@@ -101,8 +121,8 @@ async function writeRulesToMarkdown(config: DocGenConfig, rules: EslintRules): P
     const writeStream = createWriteStream(config.mdPath);
     writeStream.write(`## ${config.title}\n\n`);
     writeStream.write(`**Configured rules**\n\n`);
-    writeStream.write('Rule | Level | Additional Configs\n');
-    writeStream.write('---|---|---\n');
+    writeStream.write('|Rule | Level | Additional Configs|\n');
+    writeStream.write('|---|---|---|\n');
     Object.keys(rules)
         .sort()
         .forEach((ruleName: string): void => {
@@ -114,7 +134,7 @@ async function writeRulesToMarkdown(config: DocGenConfig, rules: EslintRules): P
                 ruleConfig = (rules[ruleName] as Linter.RuleLevelAndOptions)
                     .filter((key, i) => i !== 0)
                     .map(
-                        options =>
+                        (options) =>
                             `<pre>${JSON.stringify(options, null, 2)
                                 .replace(RegExp('\\n', 'g'), '<br>')
                                 .replace(RegExp(' ', 'g'), '&nbsp;')}</pre>`
@@ -124,7 +144,7 @@ async function writeRulesToMarkdown(config: DocGenConfig, rules: EslintRules): P
                 ruleLevel = rules[ruleName] as string;
                 ruleConfig = '&#8291;';
             }
-            writeStream.write(`${linkify(ruleName)}|${formatLevel(ruleLevel)}|${ruleConfig}\n`);
+            writeStream.write(`|${linkify(ruleName)}|${formatLevel(ruleLevel)}|${ruleConfig}|\n`);
         });
     writeStream.end();
 }

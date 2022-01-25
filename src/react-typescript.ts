@@ -5,7 +5,6 @@ module.exports = {
     extends: [
         ...baseConfig.extends,
         'plugin:react/recommended',
-        'prettier/react',
         'plugin:jsx-a11y/recommended',
         'plugin:compat/recommended',
     ],
