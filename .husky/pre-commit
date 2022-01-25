@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npm run build-ts && npm run build-rules && git add . && npx lint-staged

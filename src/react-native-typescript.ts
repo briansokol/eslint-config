@@ -2,7 +2,7 @@ import baseConfig from './base';
 
 module.exports = {
     ...baseConfig,
-    extends: [...baseConfig.extends, 'plugin:react/recommended', 'prettier/react'],
+    extends: [...baseConfig.extends, 'plugin:react/recommended', 'prettier'],
     settings: {
         react: {
             version: 'detect',

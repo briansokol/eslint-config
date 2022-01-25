@@ -1,6 +1,6 @@
 {
   "name": "@bsokol/eslint-config",
-  "version": "6.0.2",
+  "version": "7.0.0",
   "description": "Configures your React/Native/Node + TypeScript project for ESLint and Prettier",
   "main": "node-typescript.js",
   "keywords": [
@@ -27,45 +27,40 @@
     "lint:all": "npm run lint:react && npm run lint:react-native && npm run lint:node && npm run lint:jest",
     "prettier": "prettier --write './**/*.{js,json,md,yml}'",
     "build-ts": "tsc",
-    "build-rules": "ts-node ./scripts/gen-rules"
+    "build-rules": "ts-node ./scripts/gen-rules",
+    "prepare": "husky install"
   },
   "engines": {
-    "node": ">=10.13.0"
+    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
   },
   "peerDependencies": {
-    "eslint": "^7",
-    "prettier": "^2",
-    "typescript": ">=3"
+    "eslint": "^8.0.0",
+    "prettier": ">=2.0.0",
+    "typescript": ">=4.0.0"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.8.1",
-    "@typescript-eslint/parser": "^4.8.1",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-compat": "^3.8.0",
-    "eslint-plugin-jest": "^24.1.3",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-compat": "^4.0.1",
+    "eslint-plugin-jest": "^26.0.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-react-native": "^3.10.0"
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-react-native": "^4.0.0"
   },
   "devDependencies": {
-    "@types/eslint": "7.2.5",
-    "@types/node": "14.14.7",
-    "eslint": "7.13.0",
-    "husky": "4.3.0",
-    "jest": "26.6.3",
-    "lint-staged": "10.5.1",
-    "prettier": "1.19.1",
-    "react": "17.0.1",
-    "ts-node": "9.0.0",
-    "typescript": "3.7.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build-ts && npm run build-rules && git add . && lint-staged",
-      "post-commit": "git update-index --again"
-    }
+    "@types/eslint": "8.4.1",
+    "@types/node": "17.0.10",
+    "eslint": "8.7.0",
+    "husky": "^7.0.4",
+    "jest": "27.4.7",
+    "lint-staged": "^12.3.1",
+    "prettier": "2.5.1",
+    "react": "17.0.2",
+    "ts-node": "10.4.0",
+    "typescript": "4.5.5"
   },
   "lint-staged": {
     "*.{js,ts}": [

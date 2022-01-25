@@ -6,7 +6,6 @@ export default {
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'prettier',
-        'prettier/@typescript-eslint',
     ],
     plugins: ['@typescript-eslint/eslint-plugin'],
     parserOptions: {
