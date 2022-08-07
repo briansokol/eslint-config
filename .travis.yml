@@ -1,9 +1,11 @@
 language: node_js
 node_js:
-  - stable
+  - node
+
+before_install:
+  - npm install -g npm@8
 
 install:
-  - npm install -g npm@8
   - npm ci
 
 script:
