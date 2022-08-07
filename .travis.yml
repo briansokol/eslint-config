@@ -1,10 +1,12 @@
 language: node_js
 node_js:
-  - stable
+  - 17
+
+before_install:
+  - npm install -g npm@8
 
 install:
-  - npm install -g npm@7
-  - npm install
+  - npm ci
 
 script:
   - npm run build-ts
