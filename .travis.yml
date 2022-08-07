@@ -3,8 +3,8 @@ node_js:
   - stable
 
 install:
-  - npm install -g npm@7
-  - npm install
+  - npm install -g npm@8
+  - npm ci
 
 script:
   - npm run build-ts
