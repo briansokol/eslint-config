@@ -42,7 +42,7 @@
     "@typescript-eslint/eslint-plugin": "^5.32.0",
     "@typescript-eslint/parser": "^5.32.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-compat": "^4.0.2",
+    "eslint-plugin-compat": "^4.2.0",
     "eslint-plugin-jest": "^26.8.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-node": "^11.1.0",
